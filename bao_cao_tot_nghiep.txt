@@ -7,6 +7,9 @@ chương 2: cơ sở lý thuyết
 c3
 c4
 Kết luận
+-đã hiểu lý thuyết
+-đã hiểu cơ sở
+-đã làm đc v1, v2
 tài liệu tham khảo
 1. xyz
 2. cẩm nang abc
