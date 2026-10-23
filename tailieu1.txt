@@ -1,0 +1,47 @@
+Bài tập về nhà, Môn: Vi xử lý Vi điều khiển
+Quay video màn hình. Thi thoảng có mặt + có tiếng của tác giả.
+yêu cầu mạch mô phỏng: Điều khiển bằng 1 nút bấm, hiển thị 00..99 trên 2 led 7 thanh và lặp lại về 00 nếu quá 99.
+Khi bấm nhả nhanh: số tăng 1 và hiển thị
+Bấm giữ không nhả: số tăng 1, hiển thị, sau ∆t lại số tăng 1 và hiển thị, và lặp lại nếu vẫn giữ phím
+
+Cách gửi bài: upload video lên youtube, để truy cập public, gửi thông tin sv + link video vào nhóm zalo.
+Đầu video giới thiệu thông tin cá nhân, giới thiệu bài toán. 
+Quá trình vẽ mạch, quá trình code, quá trình chạy mô phỏng: sv nói về cái đang trên màn hình (nói sao cho hợp lý và thuyết phục)
+
+Các phần mềm cần chuẩn bị:
+1. Proteus version 7.8 sp2, link download: https://drive.google.com/file/d/1RC12hwjVEnWNopd_tyWFzn0z3XM9Vc0x/view
+2. Keil C51 Version 9.61  , link download: https://drive.google.com/file/d/1HmFBmq6Q_pF4EcSXgT9su3rQ7L0FfHRU/view
+
+Các bước làm:
+1. Download và Cài đặt Proteus vào thư mục d:\proteus7
+2. Download và Cài đặt Keil vào thư mục d:\Keil
+3. Proteus: dùng để vẽ mạch mô phỏng: Tìm và chạy file: d:\proteus7\BIN\ISIS.EXE
+   + Lấy linh liện: AT89C51, 7SEG cathode, button
+   + Đưa các linh kiện vào mạch (số lượng và vị trí phù hợp), có thể thêm Power (nguồn +) và Ground (-)
+   + Nối dây giữa các linh kiện : trong quá trình vẽ mạch nói về công dụng và tên gọi của linh kiện, tại sao lại nối dây như này.
+   + Lưu mạch vào trong 1 thư mục (tạo thư mục trước, lưu mạch vào thư mục đó, tên file tuỳ ý)
+4. Keil: dùng để viết firmware điều khiển AT89C51 bằng ngôn ngữ Asembly, tìm và chạy file : d:\Keil\UV4\UV4.exe
+   + Tạo mới project : menu Project => New uvision project =>  Đặt tên project: đặt theo mã sv, chọn nơi lưu cùng chỗ với thư mục đã chứa mạch
+   + Select Device for target: tìm và chọn AT89C51 (bước quan trọng vì Keil sẽ biên dịch theo tập lệnh của vi điều khiển này)
+   + New 1 file mới (nội dung trắng tinh, chưa có gì), lưu file với tên: code.asm (nhớ gõ đủ cả đuôi .asm)
+   + Add exist : đưa file code.asm đã tồn tại vào Project/Target 1/Source group 1
+   + Đặt option cho Target 1: tab Output (tab thứ 2) -> Chọn (checked) vào Create HEX file 
+   + Viết code : khi gõ code nhớ nói nhiều để người xem video biết tác giả đang code gì, ý đồ gì.
+   + F7 để biên dịch, nếu có lỗi => sửa lỗi => F7 cho đến khi hết lỗi
+
+vd về biên dịch thành công:
+Build started: Project: LINH_HON_MAY_GIAT
+Build target 'Target 1'
+assembling CODE_MAY_GIAT.ASM...
+linking...
+Program Size: data=8.0 xdata=0 code=271
+creating hex file from ".\Objects\LINH_HON_MAY_GIAT"...
+".\Objects\LINH_HON_MAY_GIAT" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:00
+
+5. Về phần mềm Proteus để chạy mô phỏng:
+   + Bấm phải chuột vào IC AT89C51 trên mạch => Edit Properties (dòng 2) => Program file : Chọn file Hex (nó nằm trong thư mục Objects)
+   + Bấm nút tam giác (giống hình Play) để bắt đầu chạy mô phỏng
+   + Dùng chuột bấm vào button trên mạch để xem 2 led thay đổi, bấm nhanh và bấm giữ : nói (thuyết minh) kết quả thay đổi.
+
+6. cuối video: cảm ơn đã xem, khen trường, lớp, thầy cô ^_^.
