@@ -45,3 +45,5 @@ Build Time Elapsed:  00:00:00
    + Dùng chuột bấm vào button trên mạch để xem 2 led thay đổi, bấm nhanh và bấm giữ : nói (thuyết minh) kết quả thay đổi.
 
 6. cuối video: cảm ơn đã xem, khen trường, lớp, thầy cô ^_^.
+
+//abc xyz
